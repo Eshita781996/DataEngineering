@@ -3,7 +3,6 @@ def binary_search(nums, target):
 
     while left <= right:
         mid = (left + right) // 2
-
         if nums[mid] == target:
             return mid
         elif target < nums[mid]:

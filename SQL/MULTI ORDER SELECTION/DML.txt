@@ -1,0 +1,13 @@
+
+INSERT INTO EmployeePool VALUES
+(1, 'M1', 'Manager', 95),
+(2, 'M2', 'Manager', 90),
+(3, 'S1', 'Senior', 89),
+(4, 'S2', 'Senior', 87),
+(5, 'S3', 'Senior', 85),
+(6, 'S4', 'Senior', 80),
+(7, 'J1', 'Junior', 78),
+(8, 'J2', 'Junior', 77),
+(9, 'J3', 'Junior', 76),
+(10, 'J4', 'Junior', 75),
+(11, 'J5', 'Junior', 74);

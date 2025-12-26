@@ -1,0 +1,17 @@
+SELECT 
+    i.person_id,
+    i.name,
+    i.income,
+    SUM(
+        CASE 
+            WHEN i.income > s.min_income 
+            THEN 
+                (LEAST(COALESCE(s.max_income, i.income), i.income) - s.min_income)
+                * s.rate / 100
+            ELSE 0 
+        END
+    ) AS total_tax
+FROM Income i
+CROSS APPLY TaxSlab s
+GROUP BY i.person_id, i.name, i.income
+ORDER BY i.person_id;

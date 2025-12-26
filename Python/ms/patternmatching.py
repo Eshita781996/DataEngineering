@@ -1,5 +1,4 @@
 
-
 # def checkpattern(ref_str):
 #     str_ref_ptr=[]
 #     counter=1

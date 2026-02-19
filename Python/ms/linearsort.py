@@ -1,4 +1,3 @@
-
 def linear_sort(arr):
     if not arr:
         return arr
@@ -19,7 +18,7 @@ def linear_sort(arr):
             count[i] -= 1
 
     return arr
-arr = [4, 2, 2, 8, 3, 3, 1]
+arr = [4, 12, 12, 8, 3, 3, 11]
 sorted_arr = linear_sort(arr)
 
 print(sorted_arr)

@@ -1,5 +1,0 @@
-CREATE TABLE Players (
-  player_id INT PRIMARY KEY,
-  player_name VARCHAR(50),
-  score INT
-);

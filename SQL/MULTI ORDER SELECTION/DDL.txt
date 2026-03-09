@@ -1,6 +1,0 @@
-CREATE TABLE EmployeePool (
-  emp_id INT PRIMARY KEY,
-  emp_name VARCHAR(50),
-  role VARCHAR(20),
-  score DECIMAL(10,2)
-);

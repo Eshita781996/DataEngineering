@@ -1,0 +1,29 @@
+1.Resource Allocation Under Budget (Knapsack Variant)
+Select combination of employees maximizing productivity under a cost budget.
+
+2.Skill Coverage Problem
+Given skills needed by a project and employees with skills, find minimum employees required to cover all skills (set cover flavor).
+
+3.Meeting Room Optimization
+Given meeting intervals, find min number of rooms required (scheduling / sweep-line logic in SQL).
+
+4.Graph Traversal — Impact Radius
+Given a social graph (user → follower), recursively find all users impacted if one node is removed.
+
+5.Detect Circular Dependency (Cycle Detection in Recursive CTE)
+On a dependency graph, return nodes that form cycles.
+
+6.Rolling 30-Day Window Best Sum (Sliding Window)
+Highest total sales over any 30-day period — without cursor.
+
+7.Multi-Criteria Top Group Selection
+Pick 1 Manager, 2 Seniors, 3 Juniors maximizing score under constraints (apply + window logic).
+
+8.Dynamic Tax Slab Calculation
+Apply tier-based tax on income using RANGE_ROWS logic or APPLY.
+
+9.Nth Best Team Combination
+Return not just best but Nth best scoring combination (ranking recursion).
+
+10.Recursive Inventory Explosion (BOM Explosion)
+Expand bill of materials to find total raw material breakdown with quantity rollups.

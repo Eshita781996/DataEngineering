@@ -1,0 +1,29 @@
+1.Organizational Hierarchy (Recursive CTE)
+Given (emp_id, manager_id), return chain for each employee.
+
+2.All-Time Highest Balance (Window with Running MAX)
+For an account ledger, display balance + running max balance at each step.
+
+3.Top N per Group — but Return Ties
+If 3rd and 4th have same value, include both (DENSE_RANK case).
+
+4.Find Overlapping Meeting Schedules
+Return employees who have calendar conflicts (time range overlaps).
+
+5.Products Never Sold in Last 6 Months but Sold Before
+Combine NOT EXISTS + date logic.
+
+6.Sales Rep Performance Rating (NTILE)
+Split reps into top/mid/bottom buckets by revenue.
+
+7.Latest Non-NULL Value Per User (Ignore nulls in window)
+Use LAST_VALUE or FIRST_VALUE with IGNORE NULLS logic workaround.
+
+8.Find Gaps in Employee Salary Bands
+Detect missing ranges using LEAD().
+
+9.Pivot Monthly Sales Into Columns (without PIVOT keyword)
+Use conditional aggregation.
+
+10.Find the Longest Increasing Sequence (ROW_NUMBER Trick)
+Given daily stock price, find longest strictly upward streak using grouping logic.

@@ -1,0 +1,29 @@
+1.Top 3 Employees by Salary (per Department)
+Use ROW_NUMBER() to return only top 3 salaries in each department.
+
+2.Employees Who Earn More Than Their Manager
+Given Employee table with manager_id, find employees whose salary > manager salary.
+
+3.Second Highest Salary (without MAX or ORDER BY TOP 2)
+Return only the 2nd highest unique salary from a table.
+
+4.Running Total of Sales (ordered by date)
+Use SUM() OVER (ORDER BY …) to compute cumulative revenue.
+
+5.Identify Consecutive Login Streaks
+From a login table, find each user’s longest consecutive-day streak.
+
+6.Find Missing Dates in a Date Range
+Given Sales(date, amount), list dates with zero sales using a calendar CTE.
+
+7.Department With Highest Avg Salary
+Return only one department — highest average salary.
+
+8.Top Selling Product Each Month
+Use PARTITION BY Month ORDER BY COUNT(*).
+
+9.Find Duplicate Records (exact duplicates)
+Return only rows that have identical column values.
+
+10.Customers Who Didn’t Place Orders in Last 90 Days
+Use LEFT JOIN or NOT EXISTS.

@@ -1,13 +1,18 @@
-CREATE TABLE Employee (
+-- DDL for Organizational Hierarchy: Table to store employees with their managers for recursive CTE queries.
+-- Sample hierarchy: Alice (CEO) -> Bob/Charlie (Managers) -> David/Eve/Frank/Grace (Employees)
+
+CREATE TABLE Employees (
     emp_id INT PRIMARY KEY,
-    emp_name VARCHAR(50),
-    cost INT,            -- Cost to allocate this employee
-    productivity INT     -- Productivity score (value)
+    emp_name VARCHAR(100),
+    manager_id INT,
+    FOREIGN KEY (manager_id) REFERENCES Employees(emp_id)
 );
 
-INSERT INTO Employee VALUES
-(1, 'John',  60, 100),
-(2, 'Maya',  40,  90),
-(3, 'Arjun', 30,  50),
-(4, 'Neha',  20,  40),
-(5, 'Ravi',  10,  25);
+INSERT INTO Employees (emp_id, emp_name, manager_id) VALUES
+(1, 'Alice', NULL),  -- CEO, no manager
+(2, 'Bob', 1),       -- Manager under Alice
+(3, 'Charlie', 1),   -- Manager under Alice
+(4, 'David', 2),     -- Employee under Bob
+(5, 'Eve', 2),       -- Employee under Bob
+(6, 'Frank', 3),     -- Employee under Charlie
+(7, 'Grace', 3);     -- Employee under Charlie

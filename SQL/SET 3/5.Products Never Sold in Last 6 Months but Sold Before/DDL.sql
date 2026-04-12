@@ -1,13 +1,16 @@
-CREATE TABLE Employee (
-    emp_id INT PRIMARY KEY,
-    emp_name VARCHAR(50),
-    cost INT,            -- Cost to allocate this employee
-    productivity INT     -- Productivity score (value)
+-- DDL for Product Sales: Table to track sales dates for products sold before but not in last 6 months.
+-- Sample: Product 1 sold in 2022 but not recently; Product 2 sold recently
+
+CREATE TABLE Sales (
+    id INT PRIMARY KEY,
+    product_id INT,
+    sale_date DATE
 );
 
-INSERT INTO Employee VALUES
-(1, 'John',  60, 100),
-(2, 'Maya',  40,  90),
-(3, 'Arjun', 30,  50),
-(4, 'Neha',  20,  40),
-(5, 'Ravi',  10,  25);
+INSERT INTO Sales (id, product_id, sale_date) VALUES
+(1, 1, '2022-01-01'),
+(2, 1, '2022-06-01'),
+(3, 2, '2022-01-01'),
+(4, 2, '2023-01-01'),  -- Within last 6 months (assuming current date is 2023-07-01)
+(5, 3, '2022-01-01'),
+(6, 3, '2022-12-01');

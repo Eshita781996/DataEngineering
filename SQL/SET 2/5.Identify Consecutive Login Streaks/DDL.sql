@@ -1,13 +1,16 @@
-CREATE TABLE Employee (
-    emp_id INT PRIMARY KEY,
-    emp_name VARCHAR(50),
-    cost INT,            -- Cost to allocate this employee
-    productivity INT     -- Productivity score (value)
+-- DDL for User Logins: Table to track login dates for finding consecutive streaks.
+-- Sample: User 1 logged in 3 consecutive days, then gap; longest streak 3
+
+CREATE TABLE Logins (
+    id INT PRIMARY KEY,
+    user_id INT,
+    login_date DATE
 );
 
-INSERT INTO Employee VALUES
-(1, 'John',  60, 100),
-(2, 'Maya',  40,  90),
-(3, 'Arjun', 30,  50),
-(4, 'Neha',  20,  40),
-(5, 'Ravi',  10,  25);
+INSERT INTO Logins (id, user_id, login_date) VALUES
+(1, 1, '2023-01-01'),
+(2, 1, '2023-01-02'),
+(3, 1, '2023-01-03'),
+(4, 1, '2023-01-05'),
+(5, 2, '2023-01-01'),
+(6, 2, '2023-01-02');

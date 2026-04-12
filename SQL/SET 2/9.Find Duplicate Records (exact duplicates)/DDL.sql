@@ -1,13 +1,13 @@
-CREATE TABLE Employee (
-    emp_id INT PRIMARY KEY,
-    emp_name VARCHAR(50),
-    cost INT,            -- Cost to allocate this employee
-    productivity INT     -- Productivity score (value)
+-- DDL for Records Table: Table with potential exact duplicates to identify.
+-- Sample: Two identical rows for name='Alice', value=100
+
+CREATE TABLE Records (
+    id INT PRIMARY KEY,
+    name VARCHAR(100),
+    value INT
 );
 
-INSERT INTO Employee VALUES
-(1, 'John',  60, 100),
-(2, 'Maya',  40,  90),
-(3, 'Arjun', 30,  50),
-(4, 'Neha',  20,  40),
-(5, 'Ravi',  10,  25);
+INSERT INTO Records (id, name, value) VALUES
+(1, 'Alice', 100),
+(2, 'Alice', 100),
+(3, 'Bob', 200);

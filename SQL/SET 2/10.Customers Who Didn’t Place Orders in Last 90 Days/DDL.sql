@@ -1,13 +1,22 @@
-CREATE TABLE Employee (
-    emp_id INT PRIMARY KEY,
-    emp_name VARCHAR(50),
-    cost INT,            -- Cost to allocate this employee
-    productivity INT     -- Productivity score (value)
+-- DDL for Customers and Orders: Tables to find customers without recent orders.
+-- Sample: Customer 1 ordered 100 days ago, 2 ordered recently; 1 is inactive
+
+CREATE TABLE Customers (
+    customer_id INT PRIMARY KEY,
+    customer_name VARCHAR(100)
 );
 
-INSERT INTO Employee VALUES
-(1, 'John',  60, 100),
-(2, 'Maya',  40,  90),
-(3, 'Arjun', 30,  50),
-(4, 'Neha',  20,  40),
-(5, 'Ravi',  10,  25);
+CREATE TABLE Orders (
+    order_id INT PRIMARY KEY,
+    customer_id INT,
+    order_date DATE,
+    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
+);
+
+INSERT INTO Customers (customer_id, customer_name) VALUES
+(1, 'Alice'),
+(2, 'Bob');
+
+INSERT INTO Orders (order_id, customer_id, order_date) VALUES
+(1, 1, '2022-12-01'),
+(2, 2, '2023-03-01');

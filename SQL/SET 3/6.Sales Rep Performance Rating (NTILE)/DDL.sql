@@ -1,13 +1,15 @@
-CREATE TABLE Employee (
-    emp_id INT PRIMARY KEY,
-    emp_name VARCHAR(50),
-    cost INT,            -- Cost to allocate this employee
-    productivity INT     -- Productivity score (value)
+-- DDL for Sales Reps: Table to store revenues for NTILE-based performance bucketing.
+-- Sample: 6 reps with revenues from 50k to 100k, split into 3 buckets
+
+CREATE TABLE SalesReps (
+    rep_id INT PRIMARY KEY,
+    revenue DECIMAL(10,2)
 );
 
-INSERT INTO Employee VALUES
-(1, 'John',  60, 100),
-(2, 'Maya',  40,  90),
-(3, 'Arjun', 30,  50),
-(4, 'Neha',  20,  40),
-(5, 'Ravi',  10,  25);
+INSERT INTO SalesReps (rep_id, revenue) VALUES
+(1, 100000),
+(2, 90000),
+(3, 80000),
+(4, 70000),
+(5, 60000),
+(6, 50000);

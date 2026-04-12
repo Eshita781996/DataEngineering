@@ -1,13 +1,16 @@
-CREATE TABLE Employee (
-    emp_id INT PRIMARY KEY,
-    emp_name VARCHAR(50),
-    cost INT,            -- Cost to allocate this employee
-    productivity INT     -- Productivity score (value)
+-- DDL for Monthly Sales: Table to store sales by product and month for pivoting into columns.
+-- Sample: Product 1 has sales in Jan, Feb, Mar; Product 2 in Jan, Feb
+
+CREATE TABLE MonthlySales (
+    id INT PRIMARY KEY,
+    product_id INT,
+    month INT,
+    sales DECIMAL(10,2)
 );
 
-INSERT INTO Employee VALUES
-(1, 'John',  60, 100),
-(2, 'Maya',  40,  90),
-(3, 'Arjun', 30,  50),
-(4, 'Neha',  20,  40),
-(5, 'Ravi',  10,  25);
+INSERT INTO MonthlySales (id, product_id, month, sales) VALUES
+(1, 1, 1, 100.00),
+(2, 1, 2, 150.00),
+(3, 1, 3, 200.00),
+(4, 2, 1, 50.00),
+(5, 2, 2, 75.00);

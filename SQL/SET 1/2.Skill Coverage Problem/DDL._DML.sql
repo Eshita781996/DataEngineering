@@ -1,3 +1,9 @@
+-- 2.Skill Coverage Problem
+-- Given skills needed by a project and employees with skills, find minimum employees required to cover all skills (set cover flavor).
+
+--Employees(emp_id,emp_name),Skills(skill_id,skill_name), employeeskills (emp_id,skill_id)
+--,ProjectSkill(skill_id) --lookup,
+
 CREATE TABLE Employees (
     emp_id INT,
     emp_name VARCHAR(50)

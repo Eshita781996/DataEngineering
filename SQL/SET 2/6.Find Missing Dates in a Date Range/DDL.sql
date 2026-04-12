@@ -1,13 +1,13 @@
-CREATE TABLE Employee (
-    emp_id INT PRIMARY KEY,
-    emp_name VARCHAR(50),
-    cost INT,            -- Cost to allocate this employee
-    productivity INT     -- Productivity score (value)
+-- DDL for Sales by Date: Table to find dates with no sales in the range of existing dates.
+-- Sample: Sales on 1st,3rd,5th; missing 2nd,4th
+
+CREATE TABLE Sales (
+    id INT PRIMARY KEY,
+    sale_date DATE,
+    amount DECIMAL(10,2)
 );
 
-INSERT INTO Employee VALUES
-(1, 'John',  60, 100),
-(2, 'Maya',  40,  90),
-(3, 'Arjun', 30,  50),
-(4, 'Neha',  20,  40),
-(5, 'Ravi',  10,  25);
+INSERT INTO Sales (id, sale_date, amount) VALUES
+(1, '2023-01-01', 100.00),
+(2, '2023-01-03', 200.00),
+(3, '2023-01-05', 50.00);

@@ -1,13 +1,15 @@
-CREATE TABLE Employee (
-    emp_id INT PRIMARY KEY,
-    emp_name VARCHAR(50),
-    cost INT,            -- Cost to allocate this employee
-    productivity INT     -- Productivity score (value)
+-- DDL for Product Sales: Table to find top-selling product per month by quantity.
+-- Sample: Month 1: Product A 100, B 50; A is top
+
+CREATE TABLE Sales (
+    id INT PRIMARY KEY,
+    product VARCHAR(50),
+    month INT,
+    quantity INT
 );
 
-INSERT INTO Employee VALUES
-(1, 'John',  60, 100),
-(2, 'Maya',  40,  90),
-(3, 'Arjun', 30,  50),
-(4, 'Neha',  20,  40),
-(5, 'Ravi',  10,  25);
+INSERT INTO Sales (id, product, month, quantity) VALUES
+(1, 'A', 1, 100),
+(2, 'B', 1, 50),
+(3, 'A', 2, 80),
+(4, 'B', 2, 120);
